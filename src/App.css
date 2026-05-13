@@ -1,0 +1,66 @@
+:root {
+  --primary-color: #6366f1;
+  --bg-color: #f8fafc;
+  --card-bg: #ffffff;
+  --text-dark: #1e293b;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-color);
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--text-dark);
+}
+
+.container { max-width: 500px; margin: 0 auto; padding: 20px; }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0 30px;
+}
+
+.logo { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 1.2rem; }
+
+.news-card {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.badge {
+  background: #e0e7ff;
+  color: var(--primary-color);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  color: #64748b;
+}
+
+.meta, .actions { display: flex; gap: 12px; align-items: center; font-size: 0.8rem; }
+
+/* Efecto de carga (Skeleton) */
+.skeleton-card {
+  height: 140px;
+  background: #e2e8f0;
+  border-radius: 16px;
+  margin-bottom: 16px;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
